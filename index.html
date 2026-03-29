@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jinghao Yu - Academic Homepage</title>
+    <title>Jinghao Yu | Math</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,31 +16,43 @@
             <a href="#about" class="nav-link">About</a>
             <a href="#research" class="nav-link">Research</a>
             <a href="#papers" class="nav-link">Papers</a>
-            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="header">
-        <div class="header-content">
-            <div class="photo-container">
-                <!-- Replace the src with your own photo -->
-                <img src="images/photo1.jpg" alt="Profile Photo" class="profile-photo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23e8e8e8%22 width=%22200%22 height=%22200%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2240%22>Photo</text></svg>'">
-            </div>
-            <div class="header-text">
+    <div class="layout">
+        <!-- Fixed Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="photo-container">
+                    <img src="images/photo1.jpg" alt="Profile Photo" class="profile-photo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23e8e8e8%22 width=%22200%22 height=%22200%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2240%22>Photo</text></svg>'">
+                </div>
                 <p class="name">Jinghao Yu (余景浩)</p>
-                <!-- <p class="name">余景浩</p> -->
                 <p class="title">Ph.D. Candidate in Mathematics</p>
                 <p class="affiliation">Tsinghua University</p>
-            </div>
-        </div>
-    </header>
 
-    <main class="main-content">
-        <!-- About Me Section -->
-        <section id="about" class="section">
-            <h2 class="section-title">About Me</h2>
-            <div class="section-content">
+                <div class="sidebar-contact">
+                    <div class="contact-item">
+                        <span class="contact-icon">&#9993;</span>
+                        <a href="mailto:yjh21@mails.tsinghua.edu.cn" class="contact-value">yjh21@mails.tsinghua.edu.cn</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">&#127968;</span>
+                        <span>Room 101, Wenbei Building</span>
+                    </div>
+                    <div class="contact-links">
+                        <a href="https://scholar.google.com/citations?pli=1&authuser=1&user=0nHxREYAAAAJ" class="social-link">Google Scholar</a>
+                        <!-- <a href="#" class="social-link">GitHub</a> -->
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- About Me Section -->
+            <section id="about" class="section">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-content">
                 <p class="bio">
                     I am a Ph.D. candidate at <a href="https://math.tsinghua.edu.cn/#" target="_blank">Department of Mathematical Sciences, 
                     Tsinghua University</a> in Beijing, China. My advisor is <a href="https://www.math.tsinghua.edu.cn/info/1125/2649.htm#"
@@ -50,97 +62,67 @@
                     From 2017 to 2021, I was an undergraduate student at <a href="https://math.sustech.edu.cn/?lang=en" target="_blank">
                     Southern University of Science and Technology</a> (SUSTech) in Shenzhen, China. I received my bachelor's at SUSTech in 2021.
                 </p>
-            </div>
-        </section>
+                </div>
+            </section>
 
-        <!-- Research Interest Section -->
-        <section id="research" class="section">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="section-content">
-                <div class="research-grid">
-                    <div class="research-item">
-                        <h3>Gromov-Witten Theory</h3>
-                        <p>The Gromov-Witten theory is a virtual counting of curves on a manifold (orbifold).</p>
+            <!-- Research Interest Section -->
+            <section id="research" class="section">
+                <h2 class="section-title">Research Interests</h2>
+                <div class="section-content">
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <h3>Gromov-Witten Theory</h3>
+                            <p>The Gromov-Witten theory is a virtual counting of curves on a manifold (orbifold).</p>
+                        </div>
+                        <div class="research-item">
+                            <h3>Topological Recursion</h3>
+                            <p>A recursion algorithm initiated from random matrix theory.</p>
+                        </div>
                     </div>
-                    <div class="research-item">
-                        <h3>Topological Recursion</h3>
-                        <p>A recursion algorithm initiated from random matrix theory.</p>
-                    </div>
-                    <!-- <div class="research-item">
-                        <h3>Knowledge Representation</h3>
-                        <p>Investigating methods for encoding and reasoning with structured knowledge in neural systems.</p>
-                    </div> -->
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Papers Section -->
-        <section id="papers" class="section">
-            <h2 class="section-title">Publications</h2>
-            <div class="section-content">
-                <div class="paper-year">
-                    <h3 class="year-heading">2026</h3>
-                    <ul class="paper-list">
-                        <li class="paper-item">
-                            <span class="paper-title">"Torus knots in lens spaces, open Gromov-Witten invariants, and topological recursion"</span>
-                            <span class="paper-authors">Jinghao Yu and Zhengyu Zong</span>
-                            <span class="paper-venue">Sci China Math. 69, 1–38 (2026)</span>
-                            [<a href="https://doi.org/10.1007/s11425-024-2395-2" class="paper-link">PDF</a>]
-                            [<a href="https://mp.weixin.qq.com/s/_O5CbFFUOQSCMosNCsMdiw" class="paper-link">Link</a>]
-                        </li>
-                        <li class="paper-item">
-                            <span class="paper-title">"On one-leg orbifold topological vertex in refined Gromov-Witten theory"</span>
-                            <span class="paper-authors">Jinghao Yu and Zhengyu Zong</span>
-                            <span class="paper-venue">arXiv: 2601.17321</span>
-                            [<a href="http://arxiv.org/abs/2601.17321" class="paper-link">PDF</a>]
-                        </li>
-                    </ul>
-                </div>
-                <div class="paper-year">
-                    <h3 class="year-heading">2025</h3>
-                    <ul class="paper-list">
-                        <li class="paper-item">
-                            <span class="paper-title">"Mirror symmetry and open/closed correspondence for the projective line"</span>
-                            <span class="paper-authors">Jinghao Yu and Zhengyu Zong</span>
-                            <span class="paper-venue">arXiv: 2509.24727</span>
-                            [<a href="http://arxiv.org/abs/2509.24727" class="paper-link">PDF</a>]
-                        </li>
-                        <li class="paper-item">
-                            <span class="paper-title">"All genus open mirror symmetry for the projective line"</span>
-                            <span class="paper-authors">Jinghao Yu and Zhengyu Zong</span>
-                            <span class="paper-venue">arXiv: 2507.15187</span>
-                            [<a href="http://arxiv.org/abs/2507.15187" class="paper-link">PDF</a>]
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2 class="section-title">Contact</h2>
-            <div class="section-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-label">Email:</span>
-                        <a href="mailto:yjh21@mails.tsinghua.edu.cn" class="contact-value">yjh21@mails.tsinghua.edu.cn</a>
+            <!-- Papers Section -->
+            <section id="papers" class="section">
+                <h2 class="section-title">Publications</h2>
+                <div class="section-content">
+                    <div class="paper-year">
+                        <h3 class="year-heading">2026</h3>
+                        <ul class="paper-list">
+                            <li class="paper-item">
+                                <span class="paper-title">"Torus knots in lens spaces, open Gromov-Witten invariants, and topological recursion"</span>
+                                <span class="paper-authors">Jinghao Yu and Zhengyu Zong</span>
+                                <span class="paper-venue">Sci China Math. 69, 1–38 (2026)</span>
+                                [<a href="https://doi.org/10.1007/s11425-024-2395-2" class="paper-link">PDF</a>]
+                                [<a href="https://mp.weixin.qq.com/s/_O5CbFFUOQSCMosNCsMdiw" class="paper-link">Link</a>]
+                            </li>
+                            <li class="paper-item">
+                                <span class="paper-title">"On one-leg orbifold topological vertex in refined Gromov-Witten theory"</span>
+                                <span class="paper-authors">Jinghao Yu and Zhengyu Zong</span>
+                                <span class="paper-venue">arXiv: 2601.17321</span>
+                                [<a href="http://arxiv.org/abs/2601.17321" class="paper-link">PDF</a>]
+                            </li>
+                        </ul>
                     </div>
-                    <!-- <div class="contact-item">
-                        <span class="contact-label">Office:</span>
-                        <span class="contact-value">Room 123, Computer Science Building, University of Example, City, Country</span>
-                    </div> -->
-                    <div class="contact-item">
-                        <span class="contact-label">Google Scholar:</span>
-                        <a href="https://scholar.google.com/citations?pli=1&authuser=1&user=0nHxREYAAAAJ" class="contact-value">Jinghao Yu</a>
+                    <div class="paper-year">
+                        <h3 class="year-heading">2025</h3>
+                        <ul class="paper-list">
+                            <li class="paper-item">
+                                <span class="paper-title">"Mirror symmetry and open/closed correspondence for the projective line"</span>
+                                <span class="paper-authors">Jinghao Yu and Zhengyu Zong</span>
+                                <span class="paper-venue">arXiv: 2509.24727</span>
+                                [<a href="http://arxiv.org/abs/2509.24727" class="paper-link">PDF</a>]
+                            </li>
+                            <li class="paper-item">
+                                <span class="paper-title">"All genus open mirror symmetry for the projective line"</span>
+                                <span class="paper-authors">Jinghao Yu and Zhengyu Zong</span>
+                                <span class="paper-venue">arXiv: 2507.15187</span>
+                                [<a href="http://arxiv.org/abs/2507.15187" class="paper-link">PDF</a>]
+                            </li>
+                        </ul>
                     </div>
-                    <!-- <div class="contact-item">
-                        <span class="contact-label">GitHub:</span>
-                        <a href="#" class="contact-value">@johndoe</a>
-                    </div> -->
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
     <!-- Footer -->
     <footer class="footer">
