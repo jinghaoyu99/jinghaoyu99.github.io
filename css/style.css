@@ -1,0 +1,364 @@
+/* ===== CSS Variables ===== */
+:root {
+    --color-primary: #1a365d;
+    --color-secondary: #2c5282;
+    --color-accent: #2b6cb0;
+    --color-text: #2d3748;
+    --color-text-light: #4a5568;
+    --color-background: #ffffff;
+    --color-section-bg: #f7fafc;
+    --color-border: #e2e8f0;
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+    --max-width: 900px;
+    --transition: 0.3s ease;
+}
+
+/* ===== Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--color-primary);
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.75rem 1rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    transition: color var(--transition);
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ===== Header ===== */
+.header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: #ffffff;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.header-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.photo-container {
+    margin-bottom: 1.5rem;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.title {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 0.25rem;
+}
+
+.affiliation {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    font-style: italic;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===== Sections ===== */
+.section {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+}
+
+.section-content {
+    padding-left: 0.5rem;
+}
+
+/* ===== Bio ===== */
+.bio {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.bio:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== Research Grid ===== */
+.research-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.research-item {
+    padding: 1.25rem;
+    background: var(--color-section-bg);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+}
+
+.research-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.research-item p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* ===== Papers ===== */
+.paper-year {
+    margin-bottom: 2rem;
+}
+
+.paper-year:last-child {
+    margin-bottom: 0;
+}
+
+.year-heading {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.paper-list {
+    list-style: none;
+}
+
+.paper-item {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.paper-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+}
+
+.paper-title {
+    font-weight: 600;
+    color: var(--color-text);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.paper-authors {
+    color: var(--color-text-light);
+    display: block;
+    font-size: 0.95rem;
+}
+
+.paper-venue {
+    color: var(--color-text-light);
+    font-style: italic;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.paper-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* ===== Contact ===== */
+.contact-info {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.contact-label {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--color-text);
+    min-width: 120px;
+}
+
+.contact-value {
+    color: var(--color-text-light);
+}
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--color-section-bg);
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .nav-container {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .header {
+        padding: 3rem 1rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .research-item {
+        padding: 1rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .contact-label {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        font-size: 0.75rem;
+        letter-spacing: 0.02em;
+    }
+
+    .header {
+        padding: 2rem 1rem;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        font-size: 1.75rem;
+    }
+}
